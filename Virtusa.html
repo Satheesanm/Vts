@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halifax Innovation Challenge</title>
+    <style>
+.agenda-container {
+
+.workshops-container {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 900px;
+}
+
+.workshops-container h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #00509e;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.workshops-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.workshops-table th, .workshops-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.workshops-table th {
+    background-color: #00509e;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.workshops-table td {
+    font-size: 1rem;
+    color: #333;
+}
+
+.workshops-table td strong {
+    color: #00509e;
+}
+
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    width: 90%;
+    max-width: 900px;
+}
+
+.agenda-container h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #00509e;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.agenda-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.agenda-buttons button {
+    background-color: #00509e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+}
+
+.agenda-buttons button:hover {
+    background-color: #003c7e;
+}
+
+.agenda-view {
+    display: flex;
+    flex-direction: column;
+}
+
+.agenda-day {
+    margin-bottom: 20px;
+}
+
+.agenda-day h3 {
+    font-size: 1.25rem;
+    color: #00509e;
+}
+
+.agenda-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.agenda-item p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+        body {
+
+.agenda-container {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 900px;
+}
+
+.agenda-container h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #00509e;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.agenda-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.agenda-table th, .agenda-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+.register-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    color: #ffffff;
+    background-color: #00509e;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.register-button:hover {
+    background-color: #003c7e;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.agenda-table th {
+    background-color: #00509e;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.agenda-table td {
+    font-size: 1rem;
+    color: #333;
+}
+
+.agenda-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.agenda-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.agenda-table td[colspan="2"] {
+    font-weight: bold;
+    background-color: #e0e0e0;
+}
+
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #00509e;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            position: relative;
+        }
+
+        header img.logo {
+            width: 120px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        header img.event-image {
+            width: 100%;
+            max-width: 500px;
+            margin-top: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .subheading {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #f9fafb;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            font-size: 1.75rem;
+            color: #00509e;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #555;
+            margin: 15px 0;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .cta-button {
+            background-color: #00a859;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.25rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #007a45;
+        }
+
+        footer {
+            background-color: #003c7e;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            border-radius: 0 0 20px 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.875rem;
+        }
+
+        .problem-statement-container {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            width: 90%; /* Responsive width */
+            max-width: 900px; /* Maximum width */
+        }
+
+        .problem-statement-container h2 {
+            margin-top: 0;
+            font-size: 1.5rem; /* Adjusted size */
+            color: #00509e;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+
+        .collapsible {
+            cursor: pointer;
+            padding: 10px;
+            text-align: left;
+            border: none;
+            outline: none;
+            font-size: 1.25rem; /* Adjusted size */
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 5px;
+            background-color: #ffffff;
+            color: #00509e;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .collapsible:hover {
+            background-color: #f0f4f8;
+        }
+
+        .content {
+            padding: 10px;
+            display: none;
+            overflow: hidden;
+            background-color: #f9fafb;
+            width: 100%;
+        }
+
+        .content p {
+            margin: 0;
+            font-size: 0.875rem; /* Smaller text size */
+            color: #333;
+        }
+
+        .expand-icon {
+            font-size: 1.5rem; /* Adjusted icon size */
+            transition: transform 0.3s;
+        }
+
+        .expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Event Logo" class="logo">
+    <h1>2023 Halifax Innovation Challenge</h1>
+    <p class="subheading">Embrace Change, Transform Tomorrow</p>
+    <img src="https://www.rbcroyalbank.com/lp/wp-content/uploads/sites/3/2023/09/2023-HIC-Logo-01.png" alt="Halifax Innovation Challenge" class="event-image">
+</header>
+
+    </header>
+<!-- Register Button -->
+<div class="register-container">
+    <a href="https://innovationchallenge.agendamanagers.ca/" class="register-button">Register Now</a>
+</div>
+
+
+
+    <div class="container">
+        <div class="grid">
+            <div class="card">
+                <h2>Event Overview</h2>
+                <p>Register to participate in this event on October 13th to October 14th. The 5th annual Halifax Innovation Challenge is here! This is a chance to build meaningful skills and provides a networking experience for post-secondary students in Nova Scotia.</p>
+                <button onclick="toggleDetails(this)">Learn More</button>
+            </div>
+
+            <div class="card">
+                <h2>The Opportunity</h2>
+                <p>Solve real business challenges and demonstrate your skills. Explore dynamic career opportunities. Network with senior leaders and learn from technology and innovation experts.</p>
+                <button onclick="toggleDetails(this)">Explore</button>
+            </div>
+
+            <div class="card">
+                <h2>The Reward</h2>
+                <p>A cash prize of $1200 for the winning team with many other small prizes to be awarded! This is your chance to showcase your skills and make an impact.</p>
+                <button onclick="toggleDetails(this)">Find Out More</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Problem Statement Container -->
+    <div class="problem-statement-container">
+        <h2>Problem Statement</h2>
+        
+        <div class="collapsible" onclick="toggleContent(this)">
+           Halifax Partnership: Accessing the Global Skilled Trades Talent Through Technology
+            <span class="expand-icon">▼</span>
+        </div>
+        <div class="content">
+            <p>Details about Halifax Partnership’s problem statement...</p>
+        </div>
+
+        <div class="collapsible" onclick="toggleContent(this)">
+            Dalhousie: Creating Attractive Jurisdictions for Digital Talent and Companies
+            <span class="expand-icon">▼</span>
+        </div>
+        <div class="content">
+            <p>Details about Dalhousie’s problem statement...</p>
+        </div>
+
+        <div class="collapsible" onclick="toggleContent(this)">
+            RBC: Building Client Relationships and Trust with AI
+            <span class="expand-icon">▼</span>
+        </div>
+        <div class="content">
+            <p>Details about RBC’s problem statement...</p>
+        </div>
+    </div>
+<!-- Ground Rules Container -->
+ <div class="container">
+        <h2>Ground Rules Container</h2>
+          <ul>
+        <li>Open to all College and University Students in Nova Scotia</li>
+        <li>Respect peers and event volunteers</li>
+        <li>Have fun!</li>
+    </ul>
+    </div>
+
+<!-- Ground Rules Container -->
+ <div class="container">
+        <h2>Agenda</h2>
+   <table class="agenda-table">
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Topic</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2"><strong>Friday October 13th, 2023</strong></td>
+            </tr>
+            <tr>
+                <td>5:30-6:30PM</td>
+                <td>Registration and Check-In</td>
+            </tr>
+            <tr>
+                <td>6:30PM</td>
+                <td>Opening Ceremonies</td>
+            </tr>
+            <tr>
+                <td>7:30PM</td>
+                <td>Working Period- Sprint 1</td>
+            </tr>
+            <tr>
+                <td colspan="2"><strong>Saturday October 14th, 2023</strong></td>
+            </tr>
+            <tr>
+                <td>8:30AM</td>
+                <td>Breakfast and Day 2 Kick-off</td>
+            </tr>
+            <tr>
+                <td>9:45AM</td>
+                <td>Workshops and Panel Session</td>
+            </tr>
+            <tr>
+                <td>11:00AM</td>
+                <td>Working Period- Sprint 2</td>
+            </tr>
+            <tr>
+                <td>3:30PM</td>
+                <td>Presentation Submission Deadline</td>
+            </tr>
+            <tr>
+                <td>4:00PM</td>
+                <td>Presentations and Judges Deliberation</td>
+            </tr>
+            <tr>
+                <td>6:30PM</td>
+                <td>Awards Dinner</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+<!-- Presentation Submissions Container -->
+    <div class="container">
+    <h2>Presentation Submissions</h2>
+    <p>
+        Participants are requested to submit their final presentations to 
+        <a href="mailto:submissions@example.com?subject=Presentation Submission&body=Please include team number, team members, problem statement, and PowerPoint deck.">submissions@example.com</a>. 
+        Be sure to include team number, team members, problem statement, and PowerPoint deck.
+    </p>
+</div>
+
+<!-- Workshops and Panel Discussions Container -->
+ <div class="container">
+    <h2>Workshops and Panel Discussions</h2>
+    
+    <!-- Workshops Table -->
+    <table class="workshops-table">
+        <thead>
+            <tr>
+                <th>Session</th>
+                <th>Speaker</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Networking 101</td>
+                <td>Nathan Laird– Program Manager, Connector Program, Halifax Partnership</td>
+            </tr>
+            <tr>
+                <td>Creating a Winning Resume</td>
+                <td>Krista Martin– Senior Recruiter, Early Talent Acquisition, RBC</td>
+            </tr>
+            <tr>
+                <td>The Pros and Perils of AI; Discussion Panel</td>
+                <td>
+                    <strong>Moderator:</strong> Anita Bianchini, Director, Program Management, Enterprise & International Applications, RBC<br>
+                    <strong>Panelists:</strong><br>
+                    Greg Kirczenow, Senior Director, AI Model Risk Management, RBC<br>
+                    Surajit Bhattacharya, SVP, Head of Technology at Virtusa<br>
+                    Dr. Hassan Sajjad, Associate Professor of Computer Science at Dalhousie
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+    <footer>
+        <p>&copy; 2023 Virtusa. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleContent(element) {
+            const content = element.nextElementSibling;
+            const icon = element.querySelector('.expand-icon');
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                icon.textContent = "▼";
+            } else {
+                content.style.display = "block";
+                icon.textContent = "▲";
+            }
+        }
+    </script>
+</body>
+</html>
